@@ -1,0 +1,66 @@
+#!/bin/bash
+
+sudo apt update;
+sudo apt full-upgrade;
+
+
+# Install Pyenv dependencies
+sudo apt install make build-essential libssl-dev zlib1g-dev \
+	libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+	libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev;
+
+
+
+
+
+# Install pyenv
+curl https://pyenv.run | bash;
+exec $SHELL;
+pyenv install 3.9.7;
+pyenv global 3.9.7;
+
+# the sed invocation inserts the lines at the start of the file
+# after any initial comment lines
+sed -Ei -e '/^([^#]|$)/ {a \
+	export PYENV_ROOT="$HOME/.pyenv"
+a \
+	export PATH="$PYENV_ROOT/bin:$PATH"
+a \
+	' -e ':a' -e '$!{n;ba};}' ~/.profile
+	echo 'eval "$(pyenv init --path)"' >>~/.profile
+
+	echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+
+# Install pipenv
+pip install --upgrade pipenv;
+pip install --upgrade pwntools;
+
+#install necessary tools
+sudo apt install zsh tmux emacs cinnamon kali-defaults kali-root-login desktop-base gdb cmake gnome-terminal \
+	figlet filters fortunes bsdgames bsdgames-nonfree dos2unix asciinema python3-pyx squashfs-tools \
+	squashfs-tools-ng zlib1g-dev liblzma-dev liblzo2-dev docker.io docker-compose containerd xfsprogs \
+       	git neovim;
+
+# Install pwndbg
+
+cd /opt;
+git clone https://github.com/pwndbg/pwndbg;
+./setup.sh;
+
+# Old
+# sudo apt install zsh tmux emacs cinnamon kali-defaults kali-root-login desktop-base gdb python3-pip cmake gdb-peda gnome-terminal cowsay figlet filters fortunes bsdgames bsdgames-nonfree dos2unix asciinema python3-pyx squashfs-tools squashfs-tools-ng zlib1g-dev liblzma-dev liblzo2-dev docker.io containerd xfsprogs git 
+
+
+#optional, uncomment if you want a "full" kali install
+#sudo apt install kali-tools-gpu kali-tools-hardware kali-tools-fuzzing kali-tools-sdr kali-tools-rfid kali-tools-information-gathering kali-tools-vulnerability kali-tools-passwords kali-tools-wireless kali-tools-reverse-engineering kali-tools-exploitation kali-tools-forensics cmake libboost-all-dev texlive-full emacs auctex fontforge doxygen python3-scipy python3-numpy graphviz radare2-cutter
+
+#install gef
+#wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh;
+#sudo -H pip3 install keystone-engine ropper capstone unicorn requests;
+
+#environment setup
+# Old setup files
+#wget -q -O setup-373.tar.bz2 https://web.engr.oregonstate.edu/~dmcgrath/setup-373.tar.bz2;
+tar xjvf environment.tar.gz -C ~/;
+chsh --shell /bin/zsh;
+exec $SHELL;

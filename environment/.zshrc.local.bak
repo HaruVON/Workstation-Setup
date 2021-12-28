@@ -1,0 +1,138 @@
+################################################################################
+#      _________  _   _ ____   ____ 
+#     |__  / ___|| | | |  _ \ / ___|
+#       / /\___ \| |_| | |_) | |    
+#      / /_ ___) |  _  |  _ <| |___ 
+#     /____|____/|_| |_|_| \_\\____|
+#                              
+#
+################################################################################
+
+## Startup ##
+# If not running interactively, do not do anything
+[[ $- != *"i"* ]] && return
+
+# Load TMUX at BOOT
+export LD_LIBRARY_PATH=$HOME/local/lib
+if [ ! -e $HOME/.NO_TMUX ]; then
+    if [ -e $HOME/bin/tmux ]; then
+    #    [[ -z "$TMUX" ]] && TERM=xterm-256color $HOME/bin/tmux
+        [[ -z "$TMUX" ]] && exec $HOME/bin/tmux -2
+    elif which tmux > /dev/null 2>&1; then
+        [[ -z "$TMUX" ]] && exec tmux -2
+    fi
+fi
+
+
+function cd_list() {
+    emulate -L zsh
+    ls
+}
+
+if echo $chpwd_functions | grep -vq "cd_list" ; then
+	chpwd_functions=(${chpwd_functions[@]} "cd_list")
+fi
+
+
+## Global varibles ##
+REMOTE_HOST="domainname.com"
+REMOTE_USER=""
+NICKNAME="Student"
+CONFIG_FOLDER=".zshconfig"
+
+## Options ##
+setopt emacs
+# add `|' to output redirections in the history
+setopt histallowclobber
+# alert me if something failed
+setopt printexitvalue
+
+# use the vi navigation keys (hjkl) besides cursor keys in menu completion
+
+# case-insensitive and partial-word then substring
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} m:[-._]=[-._] r:|[-./_]=** r:|=*' '+l:|=*'
+
+## Check network settings ##
+ ping -c 1 1.1.1.1 > /dev/null 2>&1
+ connected=$?
+ if [ $connected -eq 0 ]
+ then
+     export EXT=$(dig @resolver1.opendns.com -t A -4 myip.opendns.com +short)
+     export HIP=`dig +short $REMOTE_HOST`
+ else
+     echo "Network Unreachable"
+     export EXT=0
+     export HIP=1
+ fi
+
+## Source Plugins ##
+source $HOME/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+source $HOME/plugins/tmux/tmux.plugin.zsh
+source $HOME/plugins/git/git.plugin.zsh
+source $HOME/plugins/mosh/mosh.plugin.zsh
+source $HOME/plugins/sudo/sudo.plugin.zsh
+source $HOME/plugins/zsh_reload/zsh_reload.plugin.zsh
+
+## Phil prompt ##
+function set_phil_prompt() {
+    if [ -e $CONFIG_FOLDER/phil.sh ]; then
+        prompt off
+        source $CONFIG_FOLDER/phil.sh
+        return 0
+    fi
+    return 1
+}
+
+
+## Host Specific ##
+
+## Add bins to PATH ##
+# Add ~/bin to path
+if [ -d $HOME/bin ]
+then
+    export PATH=$PATH:$HOME/bin 
+fi
+
+export PATH=$PATH:/usr/games/
+
+
+## Sources ##
+
+# Autojumps
+if [ -e /usr/share/autojump/autojump.sh ]; then
+    source /usr/share/autojump/autojump.sh
+fi
+# Connect to the correct DBUS
+if [ -e "$HOME/bin/discover_session_bus_address.sh" ]; then
+    source $HOME/bin/discover_session_bus_address.sh
+fi
+
+# Set dir-colors if present
+if [ -e /home/$USER/.dir_colors ]; then
+    eval `dircolors /home/$USER/.dir_colors`
+fi
+
+## Exports ##
+
+## Finish Setup ##
+source $HOME/.aliases
+source $HOME/.functions
+
+## Welcome Message ##
+welcome_message
+set_phil_prompt
+
+
+# Syntax Highlighting must be sourced last for some reason, per github..
+if [ -e $HOME/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]; then
+    source $HOME/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+fi
+
+export LIBGL_ALWAYS_INDIRECT=1
+sudo /etc/init.d/dbus start &> /dev/null
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0 #GWSL
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+

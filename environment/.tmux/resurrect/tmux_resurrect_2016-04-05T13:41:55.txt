@@ -1,0 +1,77 @@
+pane	0	0	:fg	0	:	0	:/home/squinn/Documents/Projects/badcop	1	vim	:vim badcop.py
+/bin/zsh
+pane	0	1	:fg	0	:	0	:/home/squinn/Documents/Projects/badcop	1	vim	:vim detective.py
+/bin/zsh
+pane	0	2	:zsh	1	:*	0	:/home/squinn/Documents/Projects/badcop	1	zsh	:
+pane	0	3	:vim	0	:-	0	:/home/squinn/Documents/Projects/badcop	1	vim	:vim cadet.py
+pane	0	4	:fg	0	:	0	:/home/squinn/Documents/Projects/badcop/takedown	1	vim	:vim PermanentRecord.py
+/bin/zsh
+pane	0	5	:fg	0	:	0	:/home/squinn/Documents/Projects/badcop/rules/email	1	vim	:vim ../../cadet.py
+/bin/zsh
+pane	0	6	:zsh: rules	0	:	0	:/home/squinn/Documents/Projects/badcop/virustotal	1	zsh	:
+pane	0	7	:zsh	0	:	0	:/home/squinn/Documents/Projects/badcop	1	zsh	:
+pane	1	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	10	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	11	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	12	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	13	0	:zsh: geoclue	1	:*	0	:/home/squinn/Documents/Projects/geoclue	1	zsh	:
+pane	14	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	15	0	:fg	0	:-	0	:/home/squinn/Desktop/wirelesslog	1	vim	:-zsh
+vim f02.txt
+pane	15	1	:vim	0	:	0	:/home/squinn/Desktop/wirelesslog	1	vim	:vim int.txt
+pane	15	2	:fg	0	:	0	:/home/squinn/Desktop/wirelesslog	1	vim	:vim r02.txt
+-zsh
+pane	15	3	:vim	0	:#	0	:/home/squinn/Desktop/wirelesslog	1	vim	:vim all.c
+pane	15	4	:vim	1	:*	0	:/home/squinn/Desktop/wirelesslog	1	vim	:vim r06.txt
+-zsh
+vim /home/squinn/.badcop
+pane	16	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	18	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	20	0	:zsh	1	:*	0	:/tmp/badcop	1	zsh	:
+pane	20	1	:vim	0	:-	0	:/home/squinn	1	vim	:vim .badcop
+pane	21	0	:zsh	1	:*	0	:/tmp/badcop/ueoa	1	zsh	:
+pane	22	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	23	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	4	0	:zsh	0	:-	0	:/home/squinn	1	zsh	:
+pane	4	1	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	5	0	:zsh	0	:-	0	:/home/squinn	1	zsh	:
+pane	5	1	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	6	0	:vim	1	:*	0	:/home/squinn/Desktop/wirelesslog	1	vim	:vim ub.txt
+pane	6	1	:zsh	0	:-	0	:/home/squinn/Desktop/wirelesslog	1	zsh	:
+pane	7	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	8	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+window	0	0	0	:	d93e,157x79,0,0,1
+window	0	1	0	:	d93f,157x79,0,0,2
+window	0	2	1	:*	6cd7,157x79,0,0,37
+window	0	3	0	:-	d941,157x79,0,0,4
+window	0	4	0	:	d942,157x79,0,0,5
+window	0	5	0	:	d943,157x79,0,0,6
+window	0	6	0	:	d944,157x79,0,0,7
+window	0	7	0	:	d945,157x79,0,0,8
+window	1	0	1	:*	ae66,80x23,0,0,9
+window	10	0	1	:*	575f,80x23,0,0,10
+window	11	0	1	:*	5760,80x23,0,0,11
+window	12	0	1	:*	5761,80x23,0,0,12
+window	13	0	1	:*	5762,80x23,0,0,13
+window	14	0	1	:*	5763,80x23,0,0,14
+window	15	0	0	:-	ecb2,318x79,0,0,23
+window	15	1	0	:	ecb4,318x79,0,0,25
+window	15	2	0	:	ecb5,318x79,0,0,26
+window	15	3	0	:#	ecb6,318x79,0,0,27
+window	15	4	1	:*	6cb0,318x79,0,0,30
+window	16	0	1	:*	d763,80x23,0,0,24
+window	18	0	1	:*	d768,80x23,0,0,29
+window	20	0	1	:*	5762,80x23,0,0,32
+window	20	1	0	:-	5763,80x23,0,0,33
+window	21	0	1	:*	5764,80x23,0,0,34
+window	22	0	1	:*	5765,80x23,0,0,35
+window	23	0	1	:*	6b56,364x88,0,0,36
+window	4	0	0	:-	5764,80x23,0,0,15
+window	4	1	1	:*	5765,80x23,0,0,16
+window	5	0	0	:-	5766,80x23,0,0,17
+window	5	1	1	:*	5767,80x23,0,0,18
+window	6	0	1	:*	5768,80x23,0,0,19
+window	6	1	0	:-	d75f,80x23,0,0,20
+window	7	0	1	:*	d760,80x23,0,0,21
+window	8	0	1	:*	d761,80x23,0,0,22
+state	0	23

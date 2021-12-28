@@ -1,0 +1,65 @@
+pane	0	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	1	0	:vim	0	:	0	:/home/squinn/Documents/Projects/badcop	1	vim	:vim badcop.py
+pane	1	1	:vim	0	:	0	:/home/squinn/Documents/Projects/badcop	1	vim	:vim detective.py
+pane	1	2	:vim	0	:	0	:/home/squinn/Documents/Projects/badcop	1	vim	:vim cadet.py
+pane	1	3	:zsh: badcop	0	:-	0	:/home/squinn/Documents/Projects/badcop	1	zsh	:
+pane	1	4	:zsh: badcop	1	:*	0	:/home/squinn/Documents/Projects/badcop	1	zsh	:
+pane	10	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	11	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	12	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	13	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	18	0	:zsh	0	:#-	0	:/home/squinn	1	zsh	:
+pane	18	1	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	19	0	:vim	0	:	0	:/home/squinn/.config/squinn_config	1	vim	:vim remotestart.sh
+pane	19	1	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	19	2	:zsh	0	:-	0	:/home/squinn/logs	1	zsh	:
+pane	19	3	:zsh	0	:	0	:/home/squinn	1	zsh	:
+pane	19	4	:zsh	0	:	0	:/home/squinn	1	zsh	:
+pane	2	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	20	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	22	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	23	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	24	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	3	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	3	1	:zsh	0	:-	0	:/home/squinn	1	zsh	:
+pane	4	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	5	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	6	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	7	0	:vim	0	:	0	:/home/squinn	1	vim	:vim .zshrc
+pane	7	1	:vim	0	:-	0	:/home/squinn	1	vim	:vim gocode/src/github.com/schachmat/wego/we.go
+pane	7	2	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	8	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+pane	9	0	:zsh	1	:*	0	:/home/squinn	1	zsh	:
+window	0	0	1	:*	6cd8,157x79,0,0,19
+window	1	0	0	:	ecd4,157x79,0,0,25
+window	1	1	0	:	eccf,157x79,0,0,20
+window	1	2	0	:	ecd5,157x79,0,0,26
+window	1	3	0	:-	ecd6,157x79,0,0,27
+window	1	4	1	:*	6cd0,157x79,0,0,30
+window	10	0	1	:*	5764,80x23,0,0,15
+window	11	0	1	:*	6635,126x38,0,0,16
+window	12	0	1	:*	5766,80x23,0,0,17
+window	13	0	1	:*	6cd7,157x79,0,0,18
+window	18	0	0	:#-	d767,80x23,0,0,28
+window	18	1	1	:*	d768,80x23,0,0,29
+window	19	0	0	:	5761,80x23,0,0,31
+window	19	1	1	:*	5762,80x23,0,0,32
+window	19	2	0	:-	5763,80x23,0,0,33
+window	19	3	0	:	5764,80x23,0,0,34
+window	19	4	0	:	5767,80x23,0,0,37
+window	2	0	1	:*	d940,157x79,0,0,3
+window	20	0	1	:*	5565,80x22,0,0,35
+window	22	0	1	:*	5588,75x31,0,0,38
+window	23	0	1	:*	5769,80x23,0,0,39
+window	24	0	1	:*	d760,80x23,0,0,40
+window	3	0	1	:*	ecd0,157x79,0,0,21
+window	3	1	0	:-	ecd1,157x79,0,0,22
+window	4	0	1	:*	ecd2,157x79,0,0,23
+window	5	0	1	:*	ecd3,157x79,0,0,24
+window	6	0	1	:*	ae66,80x23,0,0,9
+window	7	0	0	:	6ccf,157x79,0,0,10
+window	7	1	0	:-	6cd0,157x79,0,0,11
+window	7	2	1	:*	6cd1,157x79,0,0,12
+window	8	0	1	:*	5762,80x23,0,0,13
+window	9	0	1	:*	5763,80x23,0,0,14
+state	1	4

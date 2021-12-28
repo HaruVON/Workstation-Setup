@@ -1,0 +1,4 @@
+#!/bin/sh
+
+tar -caf environment.tar.gz ./environment
+

@@ -1,0 +1,55 @@
+pane	1	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	10	1	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	11	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	12	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	13	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	14	0	:zsh	0	:	0	:/media/Data/Alpha_Mint/squinn/AndroidStudioProjects/Key_Store	1	zsh	:
+pane	14	1	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn/AndroidStudioProjects/Key_Store	1	zsh	:
+pane	14	2	:zsh	0	:#-	0	:/media/Data/Alpha_Mint/squinn/Documents/Projects/Android_Dev	1	zsh	:
+pane	14	3	:vim	0	:	0	:/media/Data/Alpha_Mint/squinn/Documents/Projects/Oregon_State_Classes/CS496/HW_3-2/code	1	vim	:vim api.py
+pane	14	4	:zsh	0	:	0	:/media/Data/Alpha_Mint/squinn/Documents/Projects/Oregon_State_Classes/CS496/HW_3-2	1	zsh	:
+pane	15	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn/Documents/Projects/Oregon_State_Classes/CS406/IFC+	1	zsh	:
+pane	15	1	:zsh	0	:	0	:/media/Data/Alpha_Mint/squinn/Documents/Projects/quest/kernel	1	zsh	:
+pane	15	2	:zsh	0	:	0	:/media/Data/Alpha_Mint/squinn/Downloads	1	zsh	:
+pane	15	3	:zsh	0	:-	0	:/media/Data/Alpha_Mint/squinn/Documents/Projects/Oregon_State_Classes/CS406/IFC+	1	zsh	:
+pane	16	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	17	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn/Documents/Projects/Oregon_State_Classes	1	zsh	:
+pane	18	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	2	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	3	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	4	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn/Downloads	1	zsh	:
+pane	5	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	7	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	7	1	:zsh	0	:-	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	8	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn/Documents/Projects/Bin/PhoneHome	1	zsh	:
+pane	8	1	:zsh	0	:-	0	:/media/Data/Alpha_Mint/squinn/Documents/Projects/Bin/PhoneHome	1	zsh	:
+pane	8	2	:zsh	0	:	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+pane	9	0	:zsh	1	:*	0	:/media/Data/Alpha_Mint/squinn	1	zsh	:
+window	1	0	1	:*	bcc1,114x25,0,0,4
+window	10	1	1	:*	d642,55x22,0,0,23
+window	11	0	1	:*	d77f,75x32,0,0,20
+window	12	0	1	:*	d580,75x31,0,0,21
+window	13	0	1	:*	d581,75x31,0,0,22
+window	14	0	0	:	ea53,117x59,0,0,24
+window	14	1	1	:*	ea54,117x59,0,0,25
+window	14	2	0	:#-	ea56,117x59,0,0,27
+window	14	3	0	:	6a56,117x59,0,0,36
+window	14	4	0	:	6a57,117x59,0,0,37
+window	15	0	1	:*	6a50,117x59,0,0,30
+window	15	1	0	:	6a51,117x59,0,0,31
+window	15	2	0	:	6a52,117x59,0,0,32
+window	15	3	0	:-	6a53,117x59,0,0,33
+window	16	0	1	:*	5764,80x23,0,0,34
+window	17	0	1	:*	5765,80x23,0,0,35
+window	18	0	1	:*	5768,80x23,0,0,38
+window	2	0	1	:*	ae62,80x23,0,0,5
+window	3	0	1	:*	ae63,80x23,0,0,6
+window	4	0	1	:*	ae64,80x23,0,0,7
+window	5	0	1	:*	ae65,80x23,0,0,8
+window	7	0	1	:*	5762,80x23,0,0,13
+window	7	1	0	:-	59e3,238x60,0,0,14
+window	8	0	1	:*	6ae4,238x59,0,0,15
+window	8	1	0	:-	6ae5,238x59,0,0,16
+window	8	2	0	:	6ae6,238x59,0,0,17
+window	9	0	1	:*	5767,80x23,0,0,18
+state	17	
