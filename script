@@ -1,51 +1,86 @@
 #!/bin/bash
 
-sudo apt update;
-sudo apt full-upgrade;
+
+SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
+PYTHON_VERSION="3.10.4"
+
+echo -e "#############################################################\n\
+	               Updating System                       \n\
+#############################################################\n";
+
+sudo apt-get update > /dev/null
+sudo apt-get full-upgrade -y > /dev/null
+sudo apt-get autoremove -y > /dev/null
 
 
 # Install Pyenv dependencies
-sudo apt install make build-essential libssl-dev zlib1g-dev \
+sudo apt-get install make build-essential libssl-dev zlib1g-dev \
 	libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
-	libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev;
+	libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y;
 
 
+if [[ ! -d ~/.pyenv ]]; then
 
+	echo -e "#############################################################\n\
+		               Installing pyenv                      \n\
+#############################################################\n";
 
+	# Install pyenv
+	curl https://pyenv.run | bash
+	# exec $SHELL;
 
-# Install pyenv
-curl https://pyenv.run | bash;
-exec $SHELL;
-pyenv install 3.9.7;
-pyenv global 3.9.7;
-
-# the sed invocation inserts the lines at the start of the file
-# after any initial comment lines
-sed -Ei -e '/^([^#]|$)/ {a \
+	# the sed invocation inserts the lines at the start of the file
+	# after any initial comment lines
+	# the sed invocation inserts the lines at the start of the file
+	# after any initial comment lines
+	sed -Ei -e '/^([^#]|$)/ {a \
 	export PYENV_ROOT="$HOME/.pyenv"
-a \
+	a \
 	export PATH="$PYENV_ROOT/bin:$PATH"
-a \
-	' -e ':a' -e '$!{n;ba};}' ~/.profile
+	a \
+	' -e ':a' -e '$!{n;ba};}' ~/.profile;
 	echo 'eval "$(pyenv init --path)"' >>~/.profile
-
 	echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+fi
+
+
+# Install newest version of python
+~/.pyenv/bin/pyenv install $PYTHON_VERSION
+~/.pyenv/bin/pyenv global $PYTHON_VERSION
+
+
+echo -e "#############################################################\n\
+	               Installing pipenv, pwntools           \n\
+#############################################################\n";
+
 
 # Install pipenv
-pip install --upgrade pipenv;
-pip install --upgrade pwntools;
+~/.pyenv/versions/$PYTHON_VERSION/bin/pip install --upgrade pip
+~/.pyenv/versions/$PYTHON_VERSION/bin/pip install --upgrade pipenv
+~/.pyenv/versions/$PYTHON_VERSION/bin/pip install --upgrade pwntools
+
+
+echo -e "#############################################################\n\
+	               Installing a bunch of packages        \n\
+#############################################################\n";
+
 
 #install necessary tools
-sudo apt install zsh tmux emacs cinnamon kali-defaults kali-root-login desktop-base gdb cmake gnome-terminal \
+sudo apt-get install zsh tmux emacs cinnamon kali-defaults kali-root-login desktop-base gdb cmake gnome-terminal \
 	figlet filters fortunes bsdgames bsdgames-nonfree dos2unix asciinema python3-pyx squashfs-tools \
 	squashfs-tools-ng zlib1g-dev liblzma-dev liblzo2-dev docker.io docker-compose containerd xfsprogs \
-       	git neovim;
+       	git neovim httpie postman -y;
+
+
+echo -e "#############################################################\n\
+	               Installing pwndbg                     \n\
+#############################################################\n";
+
 
 # Install pwndbg
-
-cd /opt;
-git clone https://github.com/pwndbg/pwndbg;
-./setup.sh;
+cd /opt
+sudo git clone https://github.com/pwndbg/pwndbg
+./setup.sh
 
 # Old
 # sudo apt install zsh tmux emacs cinnamon kali-defaults kali-root-login desktop-base gdb python3-pip cmake gdb-peda gnome-terminal cowsay figlet filters fortunes bsdgames bsdgames-nonfree dos2unix asciinema python3-pyx squashfs-tools squashfs-tools-ng zlib1g-dev liblzma-dev liblzo2-dev docker.io containerd xfsprogs git 
@@ -58,9 +93,17 @@ git clone https://github.com/pwndbg/pwndbg;
 #wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh;
 #sudo -H pip3 install keystone-engine ropper capstone unicorn requests;
 
+cd $SCRIPT_PATH
+
+echo -e "#############################################################\n\
+	               Setting up Environment                \n\
+#############################################################\n";
+
+
 #environment setup
 # Old setup files
 #wget -q -O setup-373.tar.bz2 https://web.engr.oregonstate.edu/~dmcgrath/setup-373.tar.bz2;
-tar xjvf environment.tar.gz -C ~/;
+#tar xjvf environment.tar.gz -C ~/;
+cp -r $SCRIPT_PATH/environment/* ~/ && cp -r $SCRIPT_PATH/environment/.[^.]* ~/
 chsh --shell /bin/zsh;
 exec $SHELL;
