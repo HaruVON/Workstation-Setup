@@ -69,7 +69,7 @@ echo -e "#############################################################\n\
 sudo apt-get install zsh tmux emacs cinnamon kali-defaults kali-root-login desktop-base gdb cmake gnome-terminal \
 	figlet filters fortunes bsdgames bsdgames-nonfree dos2unix asciinema python3-pyx squashfs-tools \
 	squashfs-tools-ng zlib1g-dev liblzma-dev liblzo2-dev docker.io docker-compose containerd xfsprogs \
-       	git neovim httpie postman -y;
+    git neovim httpie postman wireshark bruteshark hashcat -y;
 
 
 echo -e "#############################################################\n\
@@ -87,7 +87,7 @@ sudo git clone https://github.com/pwndbg/pwndbg
 
 
 #optional, uncomment if you want a "full" kali install
-#sudo apt install kali-tools-gpu kali-tools-hardware kali-tools-fuzzing kali-tools-sdr kali-tools-rfid kali-tools-information-gathering kali-tools-vulnerability kali-tools-passwords kali-tools-wireless kali-tools-reverse-engineering kali-tools-exploitation kali-tools-forensics cmake libboost-all-dev texlive-full emacs auctex fontforge doxygen python3-scipy python3-numpy graphviz radare2-cutter
+sudo apt install kali-tools-gpu kali-tools-hardware kali-tools-fuzzing kali-tools-sdr kali-tools-rfid kali-tools-information-gathering kali-tools-vulnerability kali-tools-passwords kali-tools-wireless kali-tools-reverse-engineering kali-tools-exploitation kali-tools-forensics cmake libboost-all-dev texlive-full emacs auctex fontforge doxygen python3-scipy python3-numpy graphviz radare2-cutter
 
 #install gef
 #wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh;
@@ -101,9 +101,11 @@ echo -e "#############################################################\n\
 
 
 #environment setup
+
 # Old setup files
 #wget -q -O setup-373.tar.bz2 https://web.engr.oregonstate.edu/~dmcgrath/setup-373.tar.bz2;
 #tar xjvf environment.tar.gz -C ~/;
+
 cp -r $SCRIPT_PATH/environment/* ~/ && cp -r $SCRIPT_PATH/environment/.[^.]* ~/
 chsh --shell /bin/zsh;
 exec $SHELL;
