@@ -8,13 +8,13 @@ echo -e "#############################################################\n\
 	               Updating System                       \n\
 #############################################################\n";
 
-sudo apt-get update > /dev/null
-sudo apt-get full-upgrade -y > /dev/null
-sudo apt-get autoremove -y > /dev/null
+sudo apt update > /dev/null
+sudo apt full-upgrade -y > /dev/null
+sudo apt autoremove -y > /dev/null
 
 
 # Install Pyenv dependencies
-sudo apt-get install make build-essential libssl-dev zlib1g-dev \
+sudo apt install make build-essential libssl-dev zlib1g-dev \
 	libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
 	libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y;
 
@@ -66,7 +66,7 @@ echo -e "#############################################################\n\
 
 
 #install necessary tools
-sudo apt-get install zsh tmux emacs cinnamon kali-defaults kali-root-login desktop-base gdb cmake gnome-terminal \
+sudo apt install zsh tmux emacs cinnamon kali-defaults kali-root-login desktop-base gdb cmake gnome-terminal \
 	figlet filters fortunes bsdgames bsdgames-nonfree dos2unix asciinema python3-pyx squashfs-tools \
 	squashfs-tools-ng zlib1g-dev liblzma-dev liblzo2-dev docker.io docker-compose containerd xfsprogs \
     git neovim httpie postman wireshark bruteshark hashcat -y;
