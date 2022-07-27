@@ -78,8 +78,10 @@ echo -e "#############################################################\n\
 
 
 # Install pwndbg
-cd /opt
-sudo git clone https://github.com/pwndbg/pwndbg
+mkdir $HOME/Tools
+cd $HOME/Toools
+git clone https://github.com/pwndbg/pwndbg
+cd $HOME/Tools/pwndbg
 ./setup.sh
 
 # Old
