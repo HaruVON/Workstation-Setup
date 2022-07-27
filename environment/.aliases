@@ -1,4 +1,4 @@
-aliase n=nvim
+alias n=nvim
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
