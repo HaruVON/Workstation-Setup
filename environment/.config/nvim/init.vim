@@ -41,7 +41,9 @@ call plug#begin('$HOME/.config/nvim/plugged')
     "Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'EdenEast/nightfox.nvim'
 call plug#end()
 
+colorscheme nightfox
 
 nmap <C-n> :NERDTreeToggle<CR>
