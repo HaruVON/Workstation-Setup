@@ -2,7 +2,8 @@
 
 SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
 PYTHON_VERSION="3.10.4"
-TOOLS_PATH=$Home/.tools
+TOOLS_PATH=$HOME/.tools
+CONFIG_PATH=$HOME/.config
 KALI=0
 
 if ( grep kali /etc/os-release ); then
@@ -13,13 +14,13 @@ echo -e "#############################################################\n \
 	               Updating System                       \n \
 #############################################################\n";
 
-sudo apt update > /dev/null
-sudo apt full-upgrade -y > /dev/null
-sudo apt autoremove -y > /dev/null
+sudo apt-get update > /dev/null
+sudo apt-get full-upgrade -y > /dev/null
+sudo apt-get autoremove -y > /dev/null
 
 
 # Install Pyenv dependencies
-sudo apt install make build-essential libssl-dev zlib1g-dev \
+sudo apt-get install make build-essential libssl-dev zlib1g-dev \
 	libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
 	libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y;
 
@@ -72,7 +73,7 @@ echo -e "#############################################################\n\
 
 
 #install necessary tools
-sudo apt install zsh tmux cinnamon desktop-base gdb cmake gnome-terminal figlet \
+sudo apt-get install zsh tmux cinnamon desktop-base gdb cmake gnome-terminal figlet \
     filters fortunes bsdgames bsdgames-nonfree dos2unix asciinema python3-pyx \
     squashfs-tools squashfs-tools-ng zlib1g-dev liblzma-dev liblzo2-dev docker.io \
     docker-compose containerd xfsprogs git neovim -y; 
@@ -87,11 +88,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 if [[ KALI -eq 1 ]]; then
     
     # Base Kali Install
-    sudo apt install kali-defaults kali-root-login postman wireshark bruteshark \
+    sudo apt-get install kali-defaults kali-root-login postman wireshark bruteshark \
         hashcat -y; 
     
     # Full Kali Instal
-    sudo apt install kali-tools-gpu kali-tools-hardware kali-tools-fuzzing \
+    sudo apt-get install kali-tools-gpu kali-tools-hardware kali-tools-fuzzing \
         kali-tools-sdr kali-tools-rfid kali-tools-information-gathering \
         kali-tools-vulnerability kali-tools-passwords kali-tools-wireless \
         kali-tools-reverse-engineering kali-tools-exploitation kali-tools-forensics \
@@ -131,7 +132,23 @@ echo -e "#############################################################\n\
 #wget -q -O setup-373.tar.bz2 https://web.engr.oregonstate.edu/~dmcgrath/setup-373.tar.bz2;
 #tar xjvf environment.tar.gz -C ~/;
 
-cp -r $SCRIPT_PATH/environment/* ~/ && cp -r $SCRIPT_PATH/environment/.[^.]* ~/
+if [[ -d $CONFIG_PATH ]]; then
+    cp -r $SCRIPT_PATH/environment/.config/* $CONFIG_PATH
+else
+    cp -r $SCRIPT_PATH/environment/.config $CONFIG_PATH
+fi
+
+cp $SCRIPT_PATH/environment/.[^.]z* $HOME
+cp $SCRIPT_PATH/environment/.[^.]b* $HOME
+cp -r $SCRIPT_PATH/environment/.[^.]t* $HOME
 chsh --shell /bin/zsh;
+
+echo -e "#############################################################\n\
+	               Installing nvm and node        \n\
+#############################################################\n";
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | zsh
+nvm install node
+
 exec $SHELL;
 
