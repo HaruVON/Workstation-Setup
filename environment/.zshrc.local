@@ -38,10 +38,10 @@ fi
 REMOTE_HOST="domainname.com"
 REMOTE_USER=""
 NICKNAME="Devin"
-CONFIG_FOLDER=".zshconfig"
+CONFIG_FOLDER=".config/zsh"
 
 ## Options ##
-setopt emacs
+#setopt emacs
 # add `|' to output redirections in the history
 setopt histallowclobber
 # alert me if something failed
@@ -66,12 +66,12 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} m:[-._]=[-._] r:|[-./_]
  fi
 
 ## Source Plugins ##
-source $HOME/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
-source $HOME/plugins/tmux/tmux.plugin.zsh
-source $HOME/plugins/git/git.plugin.zsh
-source $HOME/plugins/mosh/mosh.plugin.zsh
-source $HOME/plugins/sudo/sudo.plugin.zsh
-source $HOME/plugins/zsh_reload/zsh_reload.plugin.zsh
+#source $HOME/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+#source $HOME/plugins/tmux/tmux.plugin.zsh
+#source $HOME/plugins/git/git.plugin.zsh
+#source $HOME/plugins/mosh/mosh.plugin.zsh
+#source $HOME/plugins/sudo/sudo.plugin.zsh
+#source $HOME/plugins/zsh_reload/zsh_reload.plugin.zsh
 
 ## Phil prompt ##
 function set_phil_prompt() {
@@ -115,8 +115,8 @@ fi
 ## Exports ##
 
 ## Finish Setup ##
-source $HOME/.aliases
-source $HOME/.functions
+source $CONFIG_FOLDER/.aliases
+source $CONFIG_FOLDER/.functions
 
 ## Welcome Message ##
 welcome_message
@@ -124,13 +124,14 @@ set_phil_prompt
 
 
 # Syntax Highlighting must be sourced last for some reason, per github..
-if [ -e $HOME/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]; then
-    source $HOME/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-fi
+#if [ -e $HOME/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]; then
+#    source $HOME/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+#fi
 
-export LIBGL_ALWAYS_INDIRECT=1
-sudo /etc/init.d/dbus start &> /dev/null
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0 #GWSL
+# WSL DISPLAY
+#export LIBGL_ALWAYS_INDIRECT=1
+#sudo /etc/init.d/dbus start &> /dev/null
+#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0 #GWSL
 
 
 #cpp-run() {
@@ -199,6 +200,8 @@ parse_git_branch() {
 #    ffmpeg -i $1.gif -c vp9 -b:v 0 -crf 41 $1.webm
 #}
 # gif2webm gif-name-without-format
+
+
 
 # Pyenv Setup
 
