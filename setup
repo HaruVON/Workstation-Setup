@@ -78,10 +78,20 @@ sudo apt-get install zsh tmux cinnamon desktop-base gdb cmake gnome-terminal fig
     squashfs-tools squashfs-tools-ng zlib1g-dev liblzma-dev liblzo2-dev docker.io \
     docker-compose containerd xfsprogs git neovim -y; 
 
+
+echo -e "#############################################################\n\
+	               Installing OhMyZsh\n\
+#############################################################\n";
+
 # Install OhMyZsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+if [[ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-history-substring-search" ]]; then
+    git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+fi
+if [[ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]]; then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+fi
 
 
 # Kali Install
@@ -138,7 +148,7 @@ else
     cp -r $SCRIPT_PATH/environment/.config $CONFIG_PATH
 fi
 
-cp $SCRIPT_PATH/environment/.[^.]z* $HOME
+cp $SCRIPT_PATH/environment/.z* $HOME
 cp $SCRIPT_PATH/environment/.[^.]b* $HOME
 cp -r $SCRIPT_PATH/environment/.[^.]t* $HOME
 chsh --shell /bin/zsh;
@@ -148,6 +158,10 @@ echo -e "#############################################################\n\
 #############################################################\n";
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm install node
 
 exec $SHELL;
