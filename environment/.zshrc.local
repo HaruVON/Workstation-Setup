@@ -73,12 +73,14 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} m:[-._]=[-._] r:|[-./_]
 #source $HOME/plugins/sudo/sudo.plugin.zsh
 #source $HOME/plugins/zsh_reload/zsh_reload.plugin.zsh
 
+# Cant figure out the prompt command and where it's coming from so defaulting to else
 ## Phil prompt ##
 function set_phil_prompt() {
     if [ -e $CONFIG_PATH/phil.sh ]; then
-        prompt off
-        source $CONFIG_PATH/phil.sh
-        return 0
+        #prompt off
+        #source $CONFIG_PATH/phil.sh
+        #return 0
+	return 1
     fi
     return 1
 }
