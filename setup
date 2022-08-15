@@ -76,7 +76,7 @@ echo -e "#############################################################\n\
 sudo apt-get install zsh tmux cinnamon desktop-base gdb cmake gnome-terminal figlet \
     filters fortunes bsdgames bsdgames-nonfree dos2unix asciinema python3-pyx \
     squashfs-tools squashfs-tools-ng zlib1g-dev liblzma-dev liblzo2-dev docker.io \
-    docker-compose containerd xfsprogs git neovim -y; 
+    docker-compose containerd xfsprogs git neovim dnsutils -y; 
 
 
 echo -e "#############################################################\n\
