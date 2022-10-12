@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if ( grep kali /etc/os-release > /dev/null ); then
+    printf "yay"
+fi
