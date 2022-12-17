@@ -5,10 +5,21 @@ PYTHON_VERSION="3.10.4"
 TOOLS_PATH=$HOME/.tools
 CONFIG_PATH=$HOME/.config
 KALI=0
+#DOCKER=0
+
+#awk -F/ '$2 == "docker"' /proc/self/cgroup | read
+
+#if [[ $? -eq 0 ]]; then
+#    DOCKER=1
+#    apt update
+#    apt install kali-linux-core -y
+#fi
 
 if ( grep kali /etc/os-release ); then
     KALI=1
 fi
+
+
 
 echo -e "#############################################################\n \
 	               Updating System                       \n \
@@ -151,7 +162,6 @@ fi
 cp $SCRIPT_PATH/environment/.z* $HOME
 cp $SCRIPT_PATH/environment/.[^.]b* $HOME
 cp -r $SCRIPT_PATH/environment/.[^.]t* $HOME
-chsh --shell /bin/zsh;
 
 echo -e "#############################################################\n\
 	               Installing nvm and node        \n\
@@ -190,5 +200,6 @@ fi
 # Change extension names to the extensions you need
 npm install coc-snippets coc-json coc-python --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 
-exec $SHELL;
+chsh --shell /bin/zsh
 
+exec $SHELL
