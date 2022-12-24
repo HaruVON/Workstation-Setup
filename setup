@@ -153,15 +153,17 @@ echo -e "#############################################################\n\
 #wget -q -O setup-373.tar.bz2 https://web.engr.oregonstate.edu/~dmcgrath/setup-373.tar.bz2;
 #tar xjvf environment.tar.gz -C ~/;
 
-if [[ -d $CONFIG_PATH ]]; then
-    cp -r $SCRIPT_PATH/environment/.config/* $CONFIG_PATH
-else
-    cp -r $SCRIPT_PATH/environment/.config $CONFIG_PATH
-fi
+#if [[ -d $CONFIG_PATH ]]; then
+#    cp -r $SCRIPT_PATH/environment/.config/. $CONFIG_PATH
+#else
+#    cp -r $SCRIPT_PATH/environment/.config $CONFIG_PATH
+#fi
 
-cp $SCRIPT_PATH/environment/.z* $HOME
-cp $SCRIPT_PATH/environment/.[^.]b* $HOME
-cp -r $SCRIPT_PATH/environment/.[^.]t* $HOME
+#cp $SCRIPT_PATH/environment/.z* $HOME
+#cp $SCRIPT_PATH/environment/.[^.]b* $HOME
+#cp -r $SCRIPT_PATH/environment/.[^.]t* $HOME
+
+cp -r $SCRIPT_PATH/environment/. $HOME
 
 echo -e "#############################################################\n\
 	               Installing nvm and node        \n\
