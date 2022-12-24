@@ -106,7 +106,7 @@ fi
 
 
 # Kali Install
-if [[ KALI -eq 1 ]]; then
+if [[ $KALI -eq 1 ]]; then
     
     # Base Kali Install
     sudo apt-get install kali-defaults kali-root-login postman wireshark bruteshark \
