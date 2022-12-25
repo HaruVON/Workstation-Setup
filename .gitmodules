@@ -1,33 +1,33 @@
-[submodule "environment/.tmux/plugins/tmux-scroll-copy-mode"]
+[submodule "environment/.config/tmux/plugins/tmux-scroll-copy-mode"]
 	path = environment/.tmux/plugins/tmux-scroll-copy-mode
 	url = https://github.com/adamk33n3r/tmux-scroll-copy-mode.git
-[submodule "environment/.tmux/plugins/tmux-fingers"]
+[submodule "environment/.config/tmux/plugins/tmux-fingers"]
 	path = environment/.tmux/plugins/tmux-fingers
 	url = https://github.com/Morantron/tmux-fingers.git
-[submodule "environment/.tmux/plugins/tmux-colors-solarized"]
+[submodule "environment/.config/tmux/plugins/tmux-colors-solarized"]
 	path = environment/.tmux/plugins/tmux-colors-solarized
 	url = https://github.com/seebi/tmux-colors-solarized.git
-[submodule "environment/.tmux/plugins/tmux-resurrect"]
+[submodule "environment/.config/tmux/plugins/tmux-resurrect"]
 	path = environment/.tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect.git
-[submodule "environment/.tmux/plugins/tmux-prefix-highlight"]
+[submodule "environment/.config/tmux/plugins/tmux-prefix-highlight"]
 	path = environment/.tmux/plugins/tmux-prefix-highlight
 	url = https://github.com/tmux-plugins/tmux-prefix-highlight.git
-[submodule "environment/.tmux/plugins/tmux-online-status"]
+[submodule "environment/.config/tmux/plugins/tmux-online-status"]
 	path = environment/.tmux/plugins/tmux-online-status
 	url = https://github.com/tmux-plugins/tmux-online-status.git
-[submodule "environment/.tmux/plugins/tpm"]
+[submodule "environment/.config/tmux/plugins/tpm"]
 	path = environment/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
-[submodule "environment/.tmux/plugins/tmux-copycat"]
+[submodule "environment/.config/tmux/plugins/tmux-copycat"]
 	path = environment/.tmux/plugins/tmux-copycat
 	url = https://github.com/tmux-plugins/tmux-copycat.git
-[submodule "environment/.tmux/plugins/tmux-sidebar"]
+[submodule "environment/.config/tmux/plugins/tmux-sidebar"]
 	path = environment/.tmux/plugins/tmux-sidebar
 	url = https://github.com/tmux-plugins/tmux-sidebar.git
-[submodule "environment/.tmux/plugins/tmux-yank"]
+[submodule "environment/.config/tmux/plugins/tmux-yank"]
 	path = environment/.tmux/plugins/tmux-yank
 	url = https://github.com/tmux-plugins/tmux-yank.git
-[submodule "environment/.tmux/plugins/tmux-sensible"]
+[submodule "environment/.config/tmux/plugins/tmux-sensible"]
 	path = environment/.tmux/plugins/tmux-sensible
 	url = https://github.com/tmux-plugins/tmux-sensible.git
