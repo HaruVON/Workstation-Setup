@@ -134,7 +134,7 @@ if [[ $KALI -eq 1 ]]; then
     if [[ ! -d $TOOLS_PATH ]]; then
         mkdir $TOOLS_PATH
     fi
-    git clone https://github.com/pwndbg/pwndbg $TOOLS_PATH
+    git clone https://github.com/pwndbg/pwndbg $TOOLS_PATH/pwndbg
     cd $TOOLS_PATH/pwndbg
     ./setup.sh
 fi
