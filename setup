@@ -166,6 +166,30 @@ echo -e "#############################################################\n\
 cp -r $SCRIPT_PATH/environment/. $HOME
 
 echo -e "#############################################################\n\
+	               Installing tmux plugins\n\
+#############################################################\n";
+
+if [ ! -d ~/.config/tmux/plugins]; then
+    mkdir -p ~/.config/tmux/plugins
+fi
+
+cd ~/.config/tmux/plugins
+
+git clone https://github.com/adamk33n3r/tmux-scroll-copy-mode.git
+git clone https://github.com/Morantron/tmux-fingers.git
+git clone https://github.com/seebi/tmux-colors-solarized.git
+git clone https://github.com/tmux-plugins/tmux-resurrect.git
+git clone https://github.com/tmux-plugins/tmux-prefix-highlight.git
+git clone https://github.com/tmux-plugins/tmux-online-status.git
+git clone https://github.com/tmux-plugins/tpm.git
+git clone https://github.com/tmux-plugins/tmux-copycat.git
+git clone https://github.com/tmux-plugins/tmux-sidebar.git
+git clone https://github.com/tmux-plugins/tmux-yank.git
+git clone https://github.com/tmux-plugins/tmux-sensible.git
+
+cd $SCRIPT_PATH
+
+echo -e "#############################################################\n\
 	               Installing nvm and node        \n\
 #############################################################\n";
 
