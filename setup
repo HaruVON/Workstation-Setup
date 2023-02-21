@@ -76,7 +76,7 @@ echo -e "#############################################################\n\
 ~/.pyenv/versions/$PYTHON_VERSION/bin/pip install --upgrade pwntools
 ~/.pyenv/versions/$PYTHON_VERSION/bin/pipx install pipenv
 ~/.pyenv/versions/$PYTHON_VERSION/bin/pipx install httpie
-
+~/.pyenv/versions/$PYTHON_VERSION/bin/pipx install pygments
 
 echo -e "#############################################################\n\
 	               Installing a bunch of packages        \n\

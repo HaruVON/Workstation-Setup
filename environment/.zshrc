@@ -81,6 +81,9 @@ plugins=(
     tmux
     zsh-syntax-highlighting
     history-substring-search
+    colorize
+    gh
+    extract
 )
 
 source $HOME/.zshrc.local
