@@ -60,7 +60,3 @@ cd ./Workstation-Setup
 # Run in Debug mode
 DEBUG=1 ./setup.sh
 ```
-git clone https://github.com/HaruVON/Workstation-Setup.git
-cd ./Workstation-Setup
-./setup
-```
